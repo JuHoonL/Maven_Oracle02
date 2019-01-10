@@ -10,6 +10,7 @@ public class OrExec01 {
 		StdService ss = new StdService();
 		
 		ss.stdView();
+//		ss.insert();
 	}
 
 }

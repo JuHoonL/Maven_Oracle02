@@ -1,5 +1,17 @@
 package com.biz.oracle02.vo;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+//원하는 항목만 만들려면 ..
+@Data 	// 전체
+//@Getter // getter만
+//@Setter // setter만
+//@ToString	// toString
+//@Builder	// 생성자만(멤버변수 초기화 생성자), 기본생성자는 감춰버림
+@AllArgsConstructor	// 멤버변수 생성자
+@NoArgsConstructor // 기본 super생성자
 public class StdVO {
 
 	private String st_num ;
@@ -7,61 +19,4 @@ public class StdVO {
 	private String st_grade ;
 	private String st_tel ;
 
-	
-	public StdVO(String st_num, String st_name, String st_grade, String st_tel) {
-		super();
-		this.st_num = st_num;
-		this.st_name = st_name;
-		this.st_grade = st_grade;
-		this.st_tel = st_tel;
-	}
-	
-	
-	public StdVO(String st_name, String st_grade, String st_tel) {
-		super();
-		this.st_name = st_name;
-		this.st_grade = st_grade;
-		this.st_tel = st_tel;
-	}
-		
-	
-	public StdVO() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	
-	
-	public String getSt_num() {
-		return st_num;
-	}
-	public void setSt_num(String st_num) {
-		this.st_num = st_num;
-	}
-	public String getSt_name() {
-		return st_name;
-	}
-	public void setSt_name(String st_name) {
-		this.st_name = st_name;
-	}
-	public String getSt_grade() {
-		return st_grade;
-	}
-	public void setSt_grade(String st_grade) {
-		this.st_grade = st_grade;
-	}
-	public String getSt_tel() {
-		return st_tel;
-	}
-	public void setSt_tel(String st_tel) {
-		this.st_tel = st_tel;
-	}
-	
-	
-	@Override
-	public String toString() {
-		return "StdVO [st_num=" + st_num + ", st_name=" + st_name + ", st_grade=" + st_grade + ", st_tel=" + st_tel
-				+ "]";
-	}
-	
-	
 }
